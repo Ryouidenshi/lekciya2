@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
 
 class Student(val name: String, val expelled: Boolean) {
     override fun toString(): String {
-        return "Студент $name, отчислен: ${if (expelled) "да" else "нет"}"
+        if (expelled) {
+            return "Yes"
+        }
+        return "No"
     }
 }
